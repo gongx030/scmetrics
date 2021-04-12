@@ -2,6 +2,7 @@
 #'
 #' @param x a SingleCellExperiment object
 #' @param method a MetricsNMI object
+#' @export
 #' 
 setMethod(
 	'metrics',
@@ -26,6 +27,7 @@ setMethod(
 #'
 #' @param x a SingleCellExperiment object
 #' @param method a MetricsARI object
+#' @export
 #' 
 setMethod(
 	'metrics',
@@ -50,6 +52,7 @@ setMethod(
 #'
 #' @param x a SingleCellExperiment object
 #' @param method a MetricsARI object
+#' @export
 #' 
 setMethod(
 	'metrics',
@@ -79,6 +82,7 @@ setMethod(
 #'
 #' @param x a SingleCellExperiment object
 #' @param method a MetricsARI object
+#' @export
 #' 
 setMethod(
 	'metrics',
@@ -119,6 +123,7 @@ setMethod(
 #'
 #' @param x a SingleCellExperiment object
 #' @param method a MetricsKBET object
+#' @export
 #' 
 setMethod(
 	'metrics',

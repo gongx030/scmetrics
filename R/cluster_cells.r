@@ -3,6 +3,7 @@
 #' @param x a SingleCellExperiment object
 #' @param method a 
 #' @param ... Arguments passed to validate(...)
+#' @export
 #' 
 setMethod(
 	'cluster_cells',
