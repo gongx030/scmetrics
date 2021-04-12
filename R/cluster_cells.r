@@ -35,6 +35,7 @@ setMethod(
 		}else
 			stop(sprintf('assays(x)$counts or assays(x)$logcounts cannot be NULL'))
 
+		browser()
 		y <- y %>%
 			FindNeighbors(reduction = reduction, k.param = method@n_neighbors, dims = 1:k, verbose = FALSE, graph.name = 'graph')
 
@@ -49,7 +50,7 @@ setMethod(
 		if (metric == 'NMI'){
 			w <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))
 		}else if (metric == 'ARI'){
-			w <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))
+			w <- sapply(1:length(cls), function(i) ARI(cls[[i]], colData(x)[[label]]))
 		}else
 			stop(sprintf('unknown metric: %s', metric))
 
