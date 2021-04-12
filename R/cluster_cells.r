@@ -35,7 +35,6 @@ setMethod(
 		}else
 			stop(sprintf('assays(x)$counts or assays(x)$logcounts cannot be NULL'))
 
-		browser()
 		y <- y %>%
 			FindNeighbors(reduction = reduction, k.param = method@n_neighbors, dims = 1:k, verbose = FALSE, graph.name = 'graph')
 
