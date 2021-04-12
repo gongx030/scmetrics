@@ -47,15 +47,15 @@ setMethod(
 		cls <- lapply(res, function(r) FindClusters(y, algorithm = 3, resolution = r, verbose = FALSE, graph.name = 'graph') %>% Idents())
 
 		if (metric == 'NMI'){
-			res <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))
+			w <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))
 		}else if (metric == 'ARI'){
-			res <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))
+			w <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))
 		}else
 			stop(sprintf('unknown metric: %s', metric))
 
-		h <- which.max(res)
-		for (i in 1:length(res)){
-			sprintf('cluster_cells | %s=%.3f | resolution=%.3e%s', metric, res[i], res[i], ifelse(i == h, '*', '')) %>% message()
+		h <- which.max(w)
+		for (i in 1:length(w)){
+			sprintf('cluster_cells | %s=%.3f | resolution=%.3e%s', metric, w[i], res[i], ifelse(i == h, '*', '')) %>% message()
 		}
 
 		colData(x)[[cluster]] <- cls[[h]]
