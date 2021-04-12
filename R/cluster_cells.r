@@ -25,7 +25,7 @@ setMethod(
 
 		k <- ncol(reducedDim(x, reduction))
 
-		y <- as.Seurat(x) %>%
+		y <- as.Seurat(x, counts = 'counts', data = NULL) %>%
 			FindNeighbors(reduction = reduction, k.param = method@n_neighbors, dims = 1:k, verbose = FALSE, graph.name = 'graph')
 
 		metadata(x)$snn <- as(y@graphs[['graph']], 'dgCMatrix')
