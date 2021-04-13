@@ -40,11 +40,11 @@ setMethod(
 
 		metadata(x)$snn <- as(y@graphs[['graph']], 'dgCMatrix')
 
-		res <- 10^seq(log10(params@resolution_min), log10(params@resolution_max), length.out = params@resolution_length)
+		res <- 10^seq(log10(method@resolution_min), log10(method@resolution_max), length.out = method@resolution_length)
 		
 		sprintf('cluster_cells | %s | FindClusters | # resolutions=%d', class(method), length(res)) %>% message()
 
-		cls <- lapply(res, function(r) FindClusters(y, algorithm = 3, resolution = r, verbose = FALSE, graph.name = 'graph') %>% Idents())
+		cls <- lapply(res, function(r) FindClusters(y, algorithm = method@algorithm, resolution = r, verbose = FALSE, graph.name = 'graph') %>% Idents())
 
 		if (metric == 'NMI'){
 			w <- sapply(1:length(cls), function(i) NMI(cls[[i]], colData(x)[[label]]))

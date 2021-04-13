@@ -61,12 +61,14 @@ setClass(
 	'ClusterLouvain', 
 	contains = 'ClusterMethod',
 	slot = c(
+		algorithm = 'integer',
 		n_neighbors = 'integer',
 		resolution_min = 'numeric',
 		resolution_max = 'numeric',
 		resolution_length = 'integer'
 	),
 	prototype = list(
+		algorithm = 3L,
 		n_neighbors = 15L,
 		resolution_min =  1e-2,
 		resolution_max =  1e-0,
