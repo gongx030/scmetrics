@@ -8,7 +8,7 @@ Description: What the package does (one paragraph).
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Depends: 
 	R (>= 4.0.0),
 	SingleCellExperiment
@@ -23,4 +23,6 @@ Imports:
 	aricode,
 	cluster,
 	igraph,
-	kBET
+	kBET,
+  flavin,
+  coop
