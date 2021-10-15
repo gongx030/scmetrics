@@ -1,9 +1,9 @@
 Package: scmetrics
 Title: A R package for measuring the batch correction in single cell data
-Version: 0.0.02
-Date: 2021-04-13
-Author: Wuming Gong <gongx030@umn.edu>
-Maintainer: Wuming Gong <gongx030@umn.edu>
+Version: 0.0.03
+Date: 2021-10-15
+Author: Wuming Gong <gongx030@umn.edu>, Erik J Skie <skiex003@umn.edu>
+Maintainer: Wuming Gong <gongx030@umn.edu>, Erik J Skie <skiex003@umn.edu>
 Description: What the package does (one paragraph).
 License: GPL-3
 Encoding: UTF-8
