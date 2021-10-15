@@ -75,3 +75,48 @@ setClass(
 		resolution_length = 20L
 	)
 )
+
+#' MetricsAUROC
+#'
+setClass(
+	'MetricsAUROC', 
+	contains = 'MetricsMethod',
+  slot = c(
+		species = 'character',
+    svd = "logical"
+	),
+	prototype = list(
+		species = "human",
+    svd = TRUE
+	)
+)
+
+#' MetricsPPIScore
+#'
+setClass(
+	'MetricsPPIScore', 
+	contains = 'MetricsMethod',
+  slot = c(
+		species = 'character',
+    svd = "logical"
+	),
+	prototype = list(
+		species = "human",
+    svd = TRUE
+	)
+)
+
+#' MetricsReactomeScore
+#'
+setClass(
+	'MetricsReactomeScore', 
+	contains = 'MetricsMethod',
+  slot = c(
+		species = 'character',
+    svd = "logical"
+	),
+	prototype = list(
+		species = "human",
+    svd = TRUE
+	)
+)
