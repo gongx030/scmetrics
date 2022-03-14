@@ -1,7 +1,7 @@
 Package: scmetrics
-Title: A R package for measuring the batch correction in single cell data
-Version: 0.0.03
-Date: 2021-10-15
+Title: A R package for measuring the performance in single cell data
+Version: 0.0.4-002
+Date: 2022-03-14
 Author: Wuming Gong <gongx030@umn.edu>, Erik J Skie <skiex003@umn.edu>
 Maintainer: Wuming Gong <gongx030@umn.edu>, Erik J Skie <skiex003@umn.edu>
 Description: What the package does (one paragraph).
@@ -11,18 +11,15 @@ LazyData: true
 RoxygenNote: 7.1.2
 Depends: 
 	R (>= 4.0.0),
-	SingleCellExperiment
+	Seurat
 biocViews:
 Imports:
 	methods,
 	Matrix,
-	SummarizedExperiment,
 	dplyr,
-	Seurat,
 	BiocParallel,
 	aricode,
 	cluster,
-	igraph,
-	kBET,
-  flavin,
-  coop
+	igraph
+Suggests:
+	SummarizedExperiment

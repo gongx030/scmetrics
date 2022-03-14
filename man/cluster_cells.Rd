@@ -4,12 +4,14 @@
 \alias{cluster_cells}
 \title{cluster_cells}
 \usage{
-cluster_cells(x, method, ...)
+cluster_cells(x, method, metrics, ...)
 }
 \arguments{
 \item{x}{a data object}
 
-\item{method}{a metric method object}
+\item{method}{a clustering method object}
+
+\item{metrics}{a metrics method object}
 
 \item{...}{Other arguments}
 }
